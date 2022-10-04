@@ -1,7 +1,7 @@
 package feature
 
 type Feature interface {
-	Execute()
+	Execute() string
 }
 
 type Factory interface {
