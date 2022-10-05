@@ -1,4 +1,4 @@
-package feature
+package lib
 
 type Feature interface {
 	Execute() string
