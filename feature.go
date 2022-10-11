@@ -5,5 +5,9 @@ type Feature interface {
 }
 
 type Factory interface {
-	New() Feature
+	New(configuration map[string]interface{}) Feature
+}
+
+type Validator interface {
+	Validate(configuration map[string]interface{}) error
 }
