@@ -1,7 +1,13 @@
 package lib
 
+type Msg interface {
+	Add(string, []byte)
+	Get(string) []byte
+	GetRaw() []byte
+}
+
 type Feature interface {
-	Execute() string
+	Execute(msg Msg) error
 }
 
 type Factory interface {
